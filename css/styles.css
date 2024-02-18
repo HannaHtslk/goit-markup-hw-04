@@ -223,7 +223,17 @@ a {
     overflow: hidden;
 
 }
-
+.value-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 264px;
+    height: 112px;
+    border-radius: 4px;
+    border: 1px solid #8E8F99;
+    background:  #F4F4FD;
+    margin-bottom: 8px;
+}
 .values {
     display: flex;
     gap: 24px;
