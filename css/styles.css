@@ -161,6 +161,9 @@ a {
 .main-page {
       padding: 188px 0;
     background-color: var(--main-page-background);
+    max-width: 1440px;
+  margin: 0 auto;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),url(../images/mainbg.jpg);
   }
 .main-title {
       margin-right: auto;
@@ -206,6 +209,7 @@ a {
  .company-values {
      padding: 120px 0;
  }
+
 .visually-hidden {
     position: absolute;
     width: 1px;
