@@ -99,6 +99,7 @@ a {
     font-weight: 500;
     line-height: 24px;
     letter-spacing: 0.32px; 
+    position: relative;
     
 }
 .nav-link {
@@ -128,7 +129,7 @@ background-color: #404BBF;
 content: "";
 width: 100%;
 left: 0;
-    bottom: -1px;
+bottom: -1px;
 }
 .contact_us {
     font-style: normal;
@@ -147,19 +148,10 @@ left: 0;
     font-style: normal;
 }
 .contact-link {
-   color: #434455;
-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: #434455;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contact-link:hover {
-    color: #404BBF;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.5;
-    letter-spacing: 0.32px;
-
-}
-
+.contact-link:hover,
 .contact-link:focus {
     color: #404BBF;
     font-size: 16px;
@@ -167,6 +159,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.32px;
+
 }
 /* #endregion HEADER */
 
@@ -306,6 +299,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     height: 100%;
     border-radius: 50%;
     background-color: #4D5AE5;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link:hover, .social-link:focus  {
     background-color: #404BBF;
@@ -384,8 +378,12 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     width: calc((100% - 48px) / 3);
     background: #FFF;
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);   
+}
+.portfolio-item:hover,
+.portfolio-item:focus {
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+
 }
 .img-wrapper {
     position: relative;
@@ -396,9 +394,11 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     padding: 40px 32px 164px 32px;
     position: absolute;
         top: 0;
-        left: 0;
+line-height: 1.5;
+        font-size: 16px;
         width: 100%;
         height: 100%;
+        letter-spacing: 0.02em;
         background-color: #4D5AE5;
         transform: translatey(100%);
             transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -407,11 +407,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .portfolio-item:focus .overlay {
     transform: translatey(0);
 }
-.portfolio-item:hover,
-.portfolio-item:focus {
-    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 
-}
 .card-content {
     padding: 32px 16px;
     border: 1px solid #e7e9fc;
@@ -441,6 +437,10 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background-color: var(--footer-background);
     padding: 100px 0;
 }
+footer .container {
+    display: flex;
+    align-items: baseline;
+}
 .second_name_upd {
     color: #F4F4FD;
     font-family: "Raleway", sans-serif;
@@ -450,10 +450,13 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     letter-spacing: 0.54px;
     text-transform: uppercase;
 }
-.footer-logo .logo {
-    display: block;
-    margin-bottom: 16px;
+.footer-logo {
 
+    margin-right: 120px;
+}
+.footer-logo .logo {
+    margin-bottom: 16px;
+    display:block;
 }
 .footer-text {
     color: var(--footer-text-color);
@@ -470,14 +473,15 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     align-items: center;
     gap: 16px;
 }
+
 .footer-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: 100%;
     border-radius: 50%;
     background-color: #4D5AE5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .footer-link:hover,
 .footer-link:focus {
@@ -489,17 +493,18 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         flex-shrink: 0;
 }
 .footer-caption {
-    color: #FFF;
+    color: #FFFFFF; 
         font-style: normal;
         font-weight: 500;
-        line-height: 24px;
-        letter-spacing: 0.32px;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
         margin-bottom: 16px;
 }
 .footer-wrapper {
-    display: flex;
+
     gap: 120px;
-    align-items: baseline;
+    
 }
 
 /* #endregion footer */
